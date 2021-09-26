@@ -1,33 +1,37 @@
 package GameCode;
 
+import java.util.ArrayList;
+
 public class Player {
 
-   public int gameRound;
-   public int gameMoney;
-
-public Player(int gameround, int gameMoney){
-    this.gameRound= gameRound;
-    this.gameMoney= gameMoney;
-
-}
-
-  public int getGameMoney(){
-        int number= 50 ;
-     this.gameMoney= number;
-      return number;
-
-  }
+    public String playerName;
+    public int gameMoney;
 
 
-    public int getGameRound(){
-        int number= 50 ;
-        for(int i=0; i<50; i++){
-            if (i== 40){
-                break;
-            }
-        this.gameRound= number;}
-        return number;
+   ArrayList<String> Animals; //This array stores the animals list the player have
+
+
+
+//    public Player(){
+//        Animals = new ArrayList<>(); // Initializing the array here.
+//    }
+
+
+
+
+
+    public Player( String playerName, int gameMoney){
+        this.playerName=playerName;
+        this.gameMoney= gameMoney;
+        Animals = new ArrayList<>(); // Initializing the array here.
+
     }
+
+    public int getGameMoney(){
+        return this.gameMoney;
+
+    }
+
 
 
 
