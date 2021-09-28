@@ -20,12 +20,15 @@ public class Player {
 
 
 
-    public Player( String playerName, int gameMoney){
+    public Player(String playerName, int gameMoney){
         this.playerName=playerName;
         this.gameMoney= gameMoney;
         Animals = new ArrayList<>(); // Initializing the array here.
 
+
     }
+
+
 
     public int getGameMoney(){
         return this.gameMoney;
