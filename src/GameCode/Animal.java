@@ -33,8 +33,13 @@ public abstract class Animal {
 
 
 
-//    public String getAnimalName() {
-//        return animalName;
+//    List<Animal> animals = new ArrayList<Animal>(3);
+//animals.add(new Horse());
+//animals.add(new Cow());
+//animals.add(new Pig());
+//
+//for (Animal animal : animals) {
+//        animal.eat();
 //    }
 
 

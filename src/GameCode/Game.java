@@ -29,50 +29,47 @@ public class Game {
         }else {
             System.out.println("continue");
         }
-        //getGameRound();
-        System.out.println("1. How many Player want to play");
-        String playerSize = input.next();
         sortPlayerlist();
-
     }
-
 
     ArrayList<String> PlayerList;
 
     public int sortPlayerlist() {
+        System.out.println("1. How many Player want to play");
         int amountPlayers = input.nextInt();
-        for (int i = 0; i < amountPlayers; i++) {
+        for (int i = 4; i < amountPlayers; i++) {
             System.out.println("What name? ");
             String playerName = input.next();
             Player player = new Player(playerName, 100);
             PlayerList.add(playerName);
-            menuChoice ();
-            int menuChoiceNumber = input.nextInt();
+//            menuChoice ();
+//            int menuChoiceNumber = input.nextInt();
             animalChoice();
         }
         return amountPlayers;
     }
 
 
-    public void setGameRound(int gameRound) {
-        this.gameRound = gameRound;
-    }
+//    public void setGameRound(int gameRound) {
+//        this.gameRound = gameRound;
+//    }
 
-    public int getGameRound () {
-            for (int gameRound = 0; gameRound < 50; gameRound++) {
-                if (gameRound == 40) {
-                    break;
-                }
-                System.out.println("your time is out");
-            }
-            return gameRound;
-        }
+//    public int getGameRound () {
+//            for (int gameRound = 0; gameRound < 50; gameRound++) {
+//                if (gameRound == 40) {
+//                    break;
+//                }
+//                System.out.println("your time is out");
+//            }
+//            return gameRound;
+//        }
 
         public void menuChoice () {
             System.out.println("1.Buy_Animal 2. Buy_Food 3. Feed_pet 4. Breeding 5. Sell_Animal");
         }
 
     public void animalChoice(){
+        System.out.println("1.Buy_Animal 2. Buy_Food 3. Feed_pet 4. Breeding 5. Sell_Animal");
         int animalChoice= input.nextInt();
         if( animalChoice==1 ){
         System.out.println("1.Cow 2. Dog 3. Cat 4. Chicken 5. Bird");}
