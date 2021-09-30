@@ -25,8 +25,7 @@ package GameCode;
         this.foodAmount = foodAmount;
     }
 
-    public Food(String foodName, int foodAmount){
-        this.foodName= foodName;
+    public Food(int foodAmount){
         this.foodAmount=foodAmount;
     }
 

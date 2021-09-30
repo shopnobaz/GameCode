@@ -9,12 +9,20 @@ public class Store {
 
     ArrayList<String> Foods; //This array stores the Food list the player have
 
+    public enum SellingType
+    {
+        Animal,
+        Food,
+    };
 
 
+    public void buyAnimal(){
 
+    }
 
+    public void buyFood(){
 
-
+    }
 
 
 

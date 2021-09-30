@@ -13,14 +13,14 @@ public class Cow extends Animal{
 
     @Override
     public void animalGender(){
-        int upperbound = 2;
-        int genderMarker = random.nextInt(upperbound);
-        if (genderMarker == 0) {
-            System.out.println("Male" );
-        } else {
-            System.out.println("Female");
-        }
-//        this.genderMarker= genderMarker;
+//        int upperbound = 2;
+//        int genderMarker = random.nextInt(upperbound);
+//        if (genderMarker == 0) {
+//            System.out.println("Male" );
+//        } else {
+//            System.out.println("Female");
+//        }
+////        this.genderMarker= genderMarker;
     }
 
 //    public int getGenderChoice(){
@@ -33,17 +33,27 @@ public class Cow extends Animal{
     }
 
     @Override
-    public void setAnimalName(String animalName) {
+    public void animalName(String animalName) {
+        System.out.println("Cow");
 
     }
+    public String getAnimalName() {
+        return animalName;
 
+    }
     @Override
     public  void animalHealth(int animalHealth){
 
     }
 
 
-
+    /**
+     * Overrides the superclass method
+     * to create the zebra representation.
+     */
+    public String toString() {
+        return "Cow";
+    }
 
 
 }

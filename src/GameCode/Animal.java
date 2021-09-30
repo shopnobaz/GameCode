@@ -19,15 +19,13 @@ public abstract class Animal {
 //         this.animalHealth= animalHealth;
 //    }
 
-    public Animal() {
 
-    }
 
     public abstract void animalGender();
 
     public abstract void animalRace();
 
-    public abstract  void setAnimalName(String animalName);
+    public abstract  void animalName(String animalName);
 
     public abstract void animalHealth(int animalHealth);
 
