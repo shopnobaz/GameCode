@@ -3,34 +3,21 @@ package GameCode;
 import java.util.Random;
 
 public class Cow extends Animal{
-    public Cow(String animalName, String animalGender, Random random) {
-        super(animalName, animalGender,random);
+    public Cow(String animalName, String animalGender, int sellPrice, int animalHealth) {
+        super(animalName, animalGender, sellPrice, animalHealth);
     }
 
-//    public Random random;
-    Random random= new Random();
-    public int genderMarker;
 
     @Override
-    public void animalGender(){
-//        int upperbound = 2;
-//        int genderMarker = random.nextInt(upperbound);
-//        if (genderMarker == 0) {
-//            System.out.println("Male" );
-//        } else {
-//            System.out.println("Female");
-//        }
-////        this.genderMarker= genderMarker;
-    }
+    public void animalGender(String animalGender){
+        if( animalGender== "M"){
+        System.out.println("Male");}
+      else if( animalGender== "F"){
+          System.out.println("Female");
+      }
+   }
 
-//    public int getGenderChoice(){
-//        return genderMarker;
-//    }
-    @Override
-    public void animalRace() {
-        System.out.println("Cow");
 
-    }
 
     @Override
     public void animalName(String animalName) {
@@ -43,6 +30,11 @@ public class Cow extends Animal{
     }
     @Override
     public  void animalHealth(int animalHealth){
+
+    }
+
+    @Override
+    public void sellPrice(int sellPrice) {
 
     }
 

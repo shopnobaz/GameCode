@@ -6,12 +6,14 @@ public abstract class Animal {
     public String animalName;
     public String animalGender;
     public int animalHealth;
+    public int sellPrice;
     public Random random;    // we use this built in random option to generate random numbers.
 
-    public Animal(String animalName,String animalGender, Random random){
+    public Animal(String animalName,String animalGender, int animalHealth, int sellPrice){
         this.animalName= animalName;
         this.animalGender= animalGender;
-        this.random= new Random();
+        this.animalHealth= animalHealth;
+        this.sellPrice= sellPrice;
     }
 
 
@@ -21,13 +23,12 @@ public abstract class Animal {
 
 
 
-    public abstract void animalGender();
-
-    public abstract void animalRace();
+    public abstract void animalGender(String animalGender);
 
     public abstract  void animalName(String animalName);
 
     public abstract void animalHealth(int animalHealth);
+    public abstract void sellPrice(int sellPrice);
 
 
 
