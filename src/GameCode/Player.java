@@ -3,23 +3,29 @@ package GameCode;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * @author jahed, nahid, shehab
+ */
+
+
+
 public class Player {
 
     private String name;
-    public final int money = 1000;
+    public static int money = 1000;
 
     Scanner scan = new Scanner(System.in);
 
 
-    ArrayList<Animal> Animals; //This array stores the animals list the player have
+    ArrayList<Animal> AnimalList; //This array stores the animals list the player have
     ArrayList<Player> PlayerList;
-    ArrayList<Food> Foods;
+    ArrayList<Food> FoodList;
 
     public Player(String name) {
         this.name = name;
-        Animals = new ArrayList<>(); // Initializing the array here.
+        AnimalList = new ArrayList<>(); // Initializing the array here.
         PlayerList = new ArrayList<>();
-        Foods= new ArrayList<>();
+        FoodList= new ArrayList<>();
     }
 
 
@@ -33,10 +39,60 @@ public class Player {
             PlayerList.add(players);
         }
         for (Player players : PlayerList) {
-            System.out.println(players.name + " "+ "credit : " + players.money+  " "   + "Animal : " + Animals + "  Food :"  + Foods );
+            System.out.println(players.name + " "+ "credit : " + players.money+  " "   + "Animal : " + AnimalList + "  Food :"  + FoodList );
         }
         animalChoice();
         }
+
+    Cow cow1 = new Cow("", " ", 0, 0 );
+
+    public void animalChoice() {
+        System.out.println("1.Buy_Animal 2. Buy_Food 3. Feed_pet 4. Breeding 5. Sell_Animal");
+        int animalChoice = scan.nextInt();
+        if (animalChoice == 1) {
+            System.out.println("1.Cow 2. Dog 3. Cat 4. Chicken 5. Bird");
+        }
+        int speciesChoice = scan.nextInt();
+        if (speciesChoice == 1) {
+            cow1.animalName("COW");
+            System.out.println("Choose Gender: M or F");
+            String genderChoice= scan.next();
+            cow1.animalGender(genderChoice);
+            cow1.animalPrice(100);
+            cow1.animalHealth(100);
+//            System.out.println("Name the Animal:   ");
+//            String goru = scan.next();
+            for (Animal animals : AnimalList) {
+                System.out.println(animals.animalName );
+            }
+            AnimalList.add(cow1 );
+
+          System.out.println( "Animal : " + AnimalList + "  Food :"  + FoodList );
+//            purchaseAnimal();
+
+        } else if (animalChoice == 2) {
+            System.out.println("1.Meat 2. Vegetable 3. MixFood");
+        } else if (animalChoice == 3) {
+            System.out.println(" pet your animal");
+        }
+    }
+
+//    public void purchaseAnimal(){
+//         int playerMoney = 1000;
+//         int animalPrice= 500;
+//
+//        for (Animal animals : AnimalList) {
+//            System.out.println(animals.animalName );
+//        }
+//        AnimalList.add(cow1);
+//        if (Player.money >= cow1.animalPrice) {
+//            Player.money -= cow1.animalPrice;
+//            AnimalList.add(cow1);
+//        }
+//    }
+
+
+
 
 
 
@@ -52,26 +108,21 @@ public class Player {
 //
 //    }
 
-    Cow goru = new Cow("Goru", " ", 100, 100 );
-    public void animalChoice() {
-        System.out.println("1.Buy_Animal 2. Buy_Food 3. Feed_pet 4. Breeding 5. Sell_Animal");
-        int animalChoice = scan.nextInt();
-        if (animalChoice == 1) {
-            System.out.println("1.Cow 2. Dog 3. Cat 4. Chicken 5. Bird");
-        }
-        int speciesChoice = scan.nextInt();
-        if (speciesChoice == 1) {
-            goru.animalName("COW");
-            goru.animalGender("M");
-            goru.sellPrice(100);
-            goru.animalHealth(100);
 
-        } else if (animalChoice == 2) {
-            System.out.println("1.Meat 2. Vegetable 3. MixFood");
-        } else if (animalChoice == 3) {
-            System.out.println(" pet your animal");
-        }
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 

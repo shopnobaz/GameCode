@@ -34,7 +34,7 @@ public class Cow extends Animal{
     }
 
     @Override
-    public void sellPrice(int sellPrice) {
+    public void animalPrice(int sellPrice) {
 
     }
 

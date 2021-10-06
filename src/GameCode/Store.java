@@ -9,6 +9,12 @@ public class Store {
 
     ArrayList<String> Foods; //This array stores the Food list the player have
 
+    Cow cow1= new Cow( "","",0,0);
+    Cow cow2= new Cow( "","",0,0);
+    Cow cow3= new Cow( "","",0,0);
+    Cow cow4= new Cow( "","",0,0);
+    Cow cow5= new Cow( "","",0,0);
+
 
 
 
